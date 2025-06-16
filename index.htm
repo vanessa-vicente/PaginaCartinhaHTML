@@ -2,54 +2,96 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Uma cartinha pra você 💌</title>
+  <title>Cartinha para Léo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #fff9f5;
-      color: #3a2e2e;
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: url('https://cdn.pixabay.com/photo/2016/11/29/03/53/star-1869769_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Pompiere', cursive;
+    }
+    .container {
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
     }
-    .cartinha {
-      background: #ffe3e3;
-      border: 2px dashed #ff7a7a;
-      padding: 30px;
-      max-width: 500px;
+    .envelope {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      background-color: #004080;
+      border-radius: 12px;
       text-align: center;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      padding-top: 50px;
+      color: white;
     }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
+    .carta {
+      position: absolute;
+      top: 50px;
+      left: 10%;
+      width: 80%;
+      height: 0;
+      background: white;
+      overflow: hidden;
+      transition: height 0.8s ease;
+      border-radius: 10px;
+      z-index: 2;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
+    .envelope.aberto .carta {
+      height: 200px;
+      padding: 20px;
     }
-    .assinatura {
+    .botao-coracao {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: red;
+    }
+    .mensagem {
       margin-top: 20px;
-      font-style: italic;
-      color: #7a4c4c;
+      font-size: 18px;
+      color: black;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="cartinha">
-    <h1>Oi! 💌</h1>
-    <p>
-      Essa é uma cartinha só pra te lembrar<br>
-      o quanto você é especial pra mim. 💖<br>
-      Espero que o seu dia esteja sendo lindo!
-    </p>
-    <p class="assinatura">
-      Com carinho,<br>
-      Seu Nome ✨
-    </p>
+<div class="container">
+  <div class="envelope" id="envelope">
+    <div class="carta" id="carta">
+      <h2 style="margin:0">Happy<br><span style="font-size: 36px; font-weight: bold; color: #a00;">Birthday</span></h2>
+      <div class="mensagem">
+        Léo, desejo a você um dia cheio de amor, luz e música. <br>
+        Que essa nova etapa seja linda! Feliz aniversário! 💖
+      </div>
+    </div>
+    <button class="botao-coracao" onclick="abrirCarta()">
+      ♥
+    </button>
+    <div class="footer">
+      De: Vanessa<br>
+      Para: Léo
+    </div>
   </div>
+</div>
+
+<script>
+  function abrirCarta() {
+    document.getElementById('envelope').classList.toggle('aberto');
+  }
+</script>
 </body>
 </html>
