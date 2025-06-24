@@ -1,97 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cartinha para Léo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background: url('https://cdn.pixabay.com/photo/2016/11/29/03/53/star-1869769_1280.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Pompiere', cursive;
-    }
-    .container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .envelope {
-      position: relative;
-      width: 320px;
-      height: 320px;
-      background-color: #004080;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-      padding-top: 50px;
-      color: white;
-    }
-    .carta {
-      position: absolute;
-      top: 50px;
-      left: 10%;
-      width: 80%;
-      height: 0;
-      background: white;
-      overflow: hidden;
-      transition: height 0.8s ease;
-      border-radius: 10px;
-      z-index: 2;
-    }
-    .envelope.aberto .carta {
-      height: 200px;
-      padding: 20px;
-    }
-    .botao-coracao {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: red;
-    }
-    .mensagem {
-      margin-top: 20px;
-      font-size: 18px;
-      color: black;
-    }
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      font-size: 18px;
-    }
-  </style>
+  <title>Carta Secreta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<div class="container">
-  <div class="envelope" id="envelope">
-    <div class="carta" id="carta">
-      <h2 style="margin:0">Happy<br><span style="font-size: 36px; font-weight: bold; color: #a00;">Birthday</span></h2>
-      <div class="mensagem">
-        Léo, desejo a você um dia cheio de amor, luz e música. <br>
-        Que essa nova etapa seja linda! Feliz aniversário! 💖
-      </div>
+  <div class="carta" id="carta">
+    <div class="frente">
+      <button class="selo" onclick="abrirCarta()">🔒</button>
     </div>
-    <button class="botao-coracao" onclick="abrirCarta()">
-      ♥
-    </button>
-    <div class="footer">
-      De: Vanessa<br>
-      Para: Léo
+    <div class="conteudo">
+      <h3>Querido Léo,</h3>
+      <p>Só queria te lembrar que suas ideias têm magia e seu coração tem luz. ✨ Continue criando coisas lindas assim!</p>
+      <p>Com carinho,<br>Vanessa 💕</p>
     </div>
   </div>
-</div>
-
-<script>
-  function abrirCarta() {
-    document.getElementById('envelope').classList.toggle('aberto');
-  }
-</script>
 </body>
 </html>
