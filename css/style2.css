@@ -78,23 +78,31 @@ body, html {
   
   @media (max-width: 768px) {
     .caixa-aberta-container {
-      width: 90%;
+      width: 95%;
     }
   
     .mensagem-cartinha {
-      top: 20%;
+      top: 30%;
       font-size: 0.9rem;
     }
   }
   
   @media (max-width: 480px) {
     .caixa-aberta-container {
-      width: 95%;
+      width: 100%;
     }
   
     .mensagem-cartinha {
-      top: 18%;
+      top: 30%;
       font-size: 0.8rem;
+      color: #242222;
+      width: 60%;
+      max-height: 53%;
     }
+
+    .caixinhas-decorativas {
+        width: 50%;
+        height: 50%;
+      }
   }
   
