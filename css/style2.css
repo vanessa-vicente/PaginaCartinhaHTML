@@ -60,7 +60,7 @@ body, html {
     max-height: 50%;
     overflow-y: auto;
     font-size: clamp(0.75rem, 2vw, 1rem);
-    color: #1f1d1d;
+    color: #000000;
     z-index: 4;
     text-align: center;
     padding: 5px;
