@@ -47,7 +47,7 @@ body, html {
 
   .texto-abaixo-balao {
     position: absolute;
-    top: 70%; /* ajusta a altura conforme o tamanho do balão */
+    top: 70%; 
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
