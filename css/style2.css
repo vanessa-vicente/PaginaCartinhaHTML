@@ -42,7 +42,7 @@ body, html {
   .caixa-aberta-container {
     position: relative;
     width: 80vw;
-    max-width: 800px;
+    max-width: 900px;
     z-index: 3;
   }
   
@@ -57,7 +57,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
-    max-height: 55%;
+    max-height: 50%;
     overflow-y: auto;
     font-size: clamp(0.75rem, 2vw, 1rem);
     color: #1f1d1d;
